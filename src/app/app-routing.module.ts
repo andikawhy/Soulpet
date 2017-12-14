@@ -5,15 +5,15 @@ import { PetComponent } from './pet/pet.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: HomeComponent,
     children: []
   },
   {
-    path: 'pet',
-    component: PetComponent,
+    path: 'dashboard',
+    component: HomeComponent,
     children: []
-  }
+  },
 ];
 
 @NgModule({

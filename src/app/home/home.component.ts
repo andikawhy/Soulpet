@@ -88,6 +88,7 @@ export class HomeComponent implements OnInit {
   none: Parameter[] = [];
   pet: String;
   namaPet: String;
+  welcome: String;
 
   urlMaps: String;
   petMaps: String;
@@ -290,7 +291,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.openDialog();
     this.scope = 'habitat';
     this.parameter = this.habitat;
   }
@@ -318,7 +318,14 @@ export class HomeComponent implements OnInit {
     console.log(this.petMaps);
   }
 
+  mulaiLagi(): void {
+    this.welcome = null;
+    this.petMaps = null;
+    this.pet = null;
+  }
+
   openDialog(): void {
+    this.welcome = 'isi';
     const dialogRef: any = this.dialog.open(DialogComponent, {
       disableClose: false,
     });
@@ -326,15 +333,3 @@ export class HomeComponent implements OnInit {
   }
 
 }
-
-  //   let headers = new Headers;
-    //   headers.append('Accept', 'application/json');
-    //   headers.append('Content-Type', 'application/json');
-    //   let options = new RequestOptions({ headers: headers });
-    //   this._http.post('http://www.admin.odc-abcd.com/soulpet/parameter', body, options)
-    //     .subscribe(data => {
-    //       console.log(data['_body']);
-    //     }, error => {
-    //       console.log(error);
-    //     });
-    // }

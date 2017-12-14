@@ -26,14 +26,6 @@ export class PetService {
 
     }
 
-    // getName(): Observable<any> {
-    //     return this._http.get(this.nama, this.options)
-    //         // .map((res: Response) => res.json())
-    //         .pipe(
-    //         catchError(this.handleError<any>('getNama')),
-    //     );
-    // }
-
     postNama(nama: any): Observable<any> {
         return this._http.post(this.nama, nama, this.options)
             .map((res: Response) => res.json())
