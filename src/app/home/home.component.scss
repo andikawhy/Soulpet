@@ -1,0 +1,216 @@
+.top{
+    background-color:#ffffff;
+    border: 2px solid #E36526;
+    position:relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 23px;
+}
+
+.top:hover, .bottom:hover, .left:hover, .right:hover {
+    background-color:#eee;
+    border: 2px solid rgb(227, 161, 38);
+    white-space: nowrap;
+    text-align: center;
+    cursor: move;
+}
+
+#draggable {
+    background-color:#eee;
+    border: 2px solid rgb(227, 161, 38);
+    white-space: nowrap;
+    text-align: center;
+    cursor: move;
+}
+
+.big-circle{
+    border: 1px solid #FBCD54;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+.center-circle{
+    background-color:#E36526; 
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.right{
+    background-color:#ffffff;
+    border: 2px solid #E36526;
+    position:relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 123px;
+}
+
+.left{
+    background-color:#ffffff;
+    border: 2px solid #E36526;
+    position:relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 217px;
+}
+
+.bottom{
+    background-color:#ffffff;
+    border: 2px solid #E36526;
+    position:relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 23px;
+}
+
+div.scroll-list {
+  overflow: auto;
+  max-height: 70vh;
+}
+
+.drag-over {
+  border: #ff525b dashed 2px;
+}
+
+.drag-hint {
+  border: #ffc100 dashed 2px;
+}
+
+.drag-target-border {
+  border: #c94c4c dashed 2px;
+}
+
+.drag-target-border-green {
+  border: #eea29a dashed 2px;
+}
+
+p {
+  color: #c94c4c !important;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+  font-size: 30px;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+.box{
+    width: 500px;
+    height: 325px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -200px;
+    margin-left: -250px;
+}
+
+.text {
+    font-family: "Gochi Hand";
+    font-size: 20px;
+    color: #E36526;
+    text-align: center;
+}
+
+@-moz-keyframes pulse {
+    0% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+    50% {
+      opacity: 0.9;
+      height: 3em;
+      width: 3em;
+      margin-top: -1.5em;
+      margin-left: -1.5em;
+    }
+    100% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+    50% {
+      opacity: 0.9;
+      height: 3em;
+      width: 3em;
+      margin-top: -1.5em;
+      margin-left: -1.5em;
+    }
+    100% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+  }
+  @-o-keyframes pulse {
+    0% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+    50% {
+      opacity: 0.9;
+      height: 3em;
+      width: 3em;
+      margin-top: -1.5em;
+      margin-left: -1.5em;
+    }
+    100% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+    50% {
+      opacity: 0.9;
+      height: 3em;
+      width: 3em;
+      margin-top: -1.5em;
+      margin-left: -1.5em;
+    }
+    100% {
+      opacity: 0.2;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      margin-left: -0.5em;
+    }
+  }
+

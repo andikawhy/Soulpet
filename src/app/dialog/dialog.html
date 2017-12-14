@@ -1,0 +1,29 @@
+<div style="width:300px;">
+    <h6 class="dialog">Halo selamat datang di aplikasi Soulpet<br> "Solusi nyata pengganti Soulmate!"</h6>
+    <mat-card-content>
+        
+        <form [formGroup]="namaForm" class="example-form">
+            <div fxLayout="row" fxLayoutAlign="center center" class="form-group">
+            <div>
+                <mat-input-container flex>
+                    <input  
+                    matInput
+                    style="width:300px !important" 
+                    class="form-control" 
+                    formControlName="altername" 
+                    placeholder="Masukkan apapun! :)">
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-input-container>
+            </div>
+
+            </div>
+            
+            <div fxLayout="row" fxLayoutAlign="end center">
+            <div class="button-row">
+                <button mat-raised-button color="warn" (click)="onSubmit()" (click)="closeDialog()">Submit</button>                     
+            </div>
+            </div>
+        </form>
+    </mat-card-content>
+</div>
+     

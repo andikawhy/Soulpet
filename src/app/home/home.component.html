@@ -1,0 +1,63 @@
+<div fxLayout="row" fxLayoutAlign="center center" *ngIf="!pet">
+    <div fxFlex="100">
+        <div fxLayout="row">
+            <div fxFlex="20">
+                <div fxLayout="column" fxLayoutAlign="center center" style="padding-top: 160px;">
+                    <div class="text" *ngIf="!none">
+                        Selesai!
+                    </div>
+                    <div class="text">
+                        Drop {{scope}} to the circle!
+                    </div>
+                    <div class="card-block scroll-list">
+                        <div class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-success" style="color: white;
+                            background-color: #eea29a;" [draggable] *ngFor="let item of parameter" [dragClass]="'active'"
+                                [dragData]="item" [dragScope]="item.type" [dragEnabled]="true">
+                                {{item.name}}
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div fxFlex="80">
+                <div fxLayout="row" fxLayoutAlign="center center" style="height: 500px;">
+                    <div class="big-circle">
+                        <div fxLayout="row" fxLayoutAlign="center center" style="height: 500px;">
+                            <div class="center-circle" lass="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border-green'" [dropScope]="scope"
+                                [dragHintClass]="'drag-hint'" (onDrop)="onParameterDrop($event)">
+                                <div fxLayout="row" fxLayoutAlign="start center" style="height: 500px;">
+                                    <div class="card-block scroll-list">
+                                        <li *ngFor="let item of droppedParameter" class="list-group-item">{{item.name}} hehe</li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button mat-raised-button color="accent" (click)="generatePet()">
+                        <mat-icon>search</mat-icon>Temukan Petmu!!</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="pet">
+    <div class="text">
+        <p>Soulpet kamu adalah <strong class="blink_me">{{pet}}</strong></p> 
+        <p>yang bernama <strong class="blink_me">{{namaPet}}</strong></p>  <p> dan kamu dapat membeli soulpetmu di sini:</p>
+        <button mat-raised-button color="primary" (click)="cariMaps()">
+            <mat-icon>search</mat-icon>Cari Petmu!!
+        </button>
+    </div>
+</div>
+<br>
+<div *ngIf="petMaps">
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDU1aTue-7O2hvT9LktuEgrPc1RiFHEbvE&q=pet"
+        allowfullscreen>
+    </iframe>
+</div>
