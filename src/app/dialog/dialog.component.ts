@@ -31,9 +31,9 @@ export class DialogComponent implements OnInit {
   ngOnInit() {
 
   }
-  onSubmit(body: any) {
+  onSubmit(): void {
     let errorMessage: String;
-    body = this.namaForm.value;
+    let body = this.namaForm.value;
     this.openTutorial();
     this.petService.postNama(body)
       .subscribe(result => {

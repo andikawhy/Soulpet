@@ -15,8 +15,8 @@ import 'rxjs/Rx';
 @Injectable()
 
 export class PetService {
-    private petsUrl: any = 'http://www.admin.odc-abcd.com/soulpet/parameter';
-    private nama: any = 'http://www.admin.odc-abcd.com/soulpet/name';
+    private petsUrl: any = 'http://www.soulpet.odc-abcd.com/parameter';
+    private nama: any = 'http://www.soulpet.odc-abcd.com/name';
     headers: any = new Headers({ 'Content-Type': 'application/json' });
     options: any = new RequestOptions({ headers: this.headers });
 

@@ -8,6 +8,17 @@
     top: 23px;
 }
 
+#table {
+  color: white; margin-bottom: 5px;
+  background-color: #E36526;
+}
+
+#table :hover {
+  color: white; margin-bottom: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
 .top:hover, .bottom:hover, .left:hover, .right:hover {
     background-color:#eee;
     border: 2px solid rgb(227, 161, 38);

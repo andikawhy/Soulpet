@@ -86,12 +86,14 @@ export class HomeComponent implements OnInit {
   droppedParameter: Parameter[] = [];
   scope: String;
   none: Parameter[] = [];
-  pet: String;
+  pet: String = null;
   namaPet: String;
   welcome: String;
+  temukan: String;
 
   urlMaps: String;
   petMaps: String;
+  urlGambar: String;
 
   constructor(
     public dialog: MatDialog,
@@ -99,7 +101,7 @@ export class HomeComponent implements OnInit {
     private _http: Http,
   ) {
 
-  }
+    }
 
   onParameterDrop(e: any, parameter: Parameter) {
     if (this.scope === 'habitat') {
@@ -278,11 +280,12 @@ export class HomeComponent implements OnInit {
         this.parameterForm.patchValue({
           kesibukan: parameter.name,
         });
-        console.log(parameter.name);
+        console.log(this.temukan);
       }
       // console.log('makanan added');
       this.droppedParameter = [];
       if (this.droppedParameter) {
+        this.temukan = 'hehe';
         this.scope = 'none';
         this.parameter = this.none;
         // this.generatePet();
@@ -305,6 +308,37 @@ export class HomeComponent implements OnInit {
         if (result.pet) {
           this.pet = result.pet;
           console.log(this.pet);
+          if (this.pet === 'kucing') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/016-cat.png';
+          } else if (this.pet === 'sapi') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/002-animal-7.png';
+          } else if (this.pet === 'iguana') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/005-animal-4.png';
+          } else if (this.pet === 'burung') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/006-animals-3.png';
+          } else if (this.pet === 'ikan') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/007-animals-2.png';
+          } else if (this.pet === 'kera') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/013-animals.png';
+          } else if (this.pet === 'babi') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/014-animal.png';
+          } else if (this.pet === 'kepiting') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/004-animal-5.png';
+          } else if (this.pet === 'kelinci') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/010-animal-2.png';
+          } else if (this.pet === 'kura-kura') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/011-animal-1.png';
+          } else if (this.pet === 'ular') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/008-animal-3.png';
+          } else if (this.pet === 'kumbang') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/003-animal-6.png';
+          } else if (this.pet === 'hamster') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/009-mouse.png';
+          } else if (this.pet === 'anjing') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/015-dog.png';
+          } else if (this.pet === 'ayam') {
+            this.urlGambar = 'http://soulpet.odc-abcd.com/petpng/012-animals-1.png';
+          } 
         }
       },
       error => errorMessage = error);
