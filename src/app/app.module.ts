@@ -1,5 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { Http, HttpModule, JsonpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -49,6 +49,7 @@ import { PetService } from './services/pet.service';
     Ng2DragDropModule.forRoot(),
   ],
   providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
     PetService,
   ],
   entryComponents: [DialogComponent, TutorialComponent],
